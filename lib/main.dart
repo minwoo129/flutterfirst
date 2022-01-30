@@ -37,7 +37,10 @@ class _MyApp extends State<MyApp> {
             child: Switch(
                 value: switchValue,
                 onChanged: (value) {
-                  switchValue = value;
+                  setState(() {
+                    print(value);
+                    switchValue = value;
+                  });
                 }),
           ),
         ));
