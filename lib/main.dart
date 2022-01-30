@@ -24,10 +24,14 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Center(
-          child: Text('hello\nFlutter', textAlign: TextAlign.center)
-      ),
-    );
+      home: Container(
+          color: Colors.white,
+          child: Center(
+            child: Text(
+                'hello\nFlutter',
+                textAlign: TextAlign.center
+            )
+      )));
   }
 }
 
