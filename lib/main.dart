@@ -13,6 +13,7 @@ class MyApp extends StatefulWidget {
 }
 class _MyApp extends State<MyApp> {
   var switchValue = false;
+  String test = 'hello';
 
   // This widget is the root of your application.
   @override
@@ -34,14 +35,21 @@ class _MyApp extends State<MyApp> {
         darkTheme: ThemeData.light(),
         home: Scaffold(
           body: Center(
-            child: Switch(
-                value: switchValue,
-                onChanged: (value) {
+            child: ElevatedButton(
+              child: Text('$test'),
+              onPressed: () {
+                if(test == 'hello') {
                   setState(() {
-                    print(value);
-                    switchValue = value;
+                    test = 'flutter';
                   });
-                }),
+                }
+                else {
+                  setState(() {
+                    test = 'hello';
+                  });
+                }
+              },
+            )
           ),
         ));
   }
