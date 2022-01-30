@@ -29,7 +29,8 @@ class MyApp extends StatelessWidget {
           child: Center(
             child: Text(
                 'hello\nFlutter',
-                textAlign: TextAlign.center
+                textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.blue, fontSize: 20),
             )
       )));
   }
